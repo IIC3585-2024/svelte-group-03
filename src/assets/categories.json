@@ -1,0 +1,61 @@
+{
+    "hunting": {
+        "bigGameHunting": {
+            "name": "Big Game Hunting",
+            "url": "big-game-hunting"
+        },
+        "deerHunting": {
+            "name": "Deer Hunting",
+            "url": "deer-hunting"
+        },
+        "boowHunting": {
+            "name": "Bow Hunting",
+            "url": "bow-hunting"
+        },
+        "huntingDogs": {
+            "name": "Hunting Dogs",
+            "url": "hunting-dogs"
+        },
+        "predatorHunting": {
+            "name": "Predator Hunting",
+            "url": "predator-hunting"
+        },
+        "smallGameHunting": {
+            "name": "Small Game Hunting",
+            "url": "small-game-hunting"
+        },
+        "turkeyHunting": {
+            "name": "Turkey Hunting",
+            "url": "turkey-hunting"
+        },
+        "uplandBirdHunting": {
+            "name": "Upland Bird Hunting",
+            "url": "upland-bird-hunting"
+        },
+        "waterfowlHunting": {
+            "name": "Waterfowl Hunting",
+            "url": "waterfowl-hunting"
+        },
+        "wildGameRecipes": {
+            "name": "Wild Game Recipes",
+            "url": "wild-game-recipes"
+        }
+    },
+
+    "fishing": {
+        
+
+    },
+    "conservation": {
+
+    },
+    "guns": {
+
+    },
+    "gear": {
+
+    },
+    "more": {
+
+    }
+}
