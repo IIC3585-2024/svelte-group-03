@@ -11,3 +11,5 @@ Para ejecutar correr en consola el siguiente comando:
 ```
 npm run dev
 ```
+
+Íconos obtenidos de https://carbondesignsystem.com/elements/icons/library/

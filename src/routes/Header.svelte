@@ -3,10 +3,10 @@
 		Header,
 		HeaderNav,
 		HeaderNavItem,
-        Search,
-        // LogoInstagram,
-        // LogoYoutube,
-        // LogoFacebook,
+    Search,
+    // LogoInstagram,
+    // LogoYoutube,
+    // LogoFacebook,
 	} from "carbon-components-svelte";
 
 </script>
