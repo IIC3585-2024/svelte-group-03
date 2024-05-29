@@ -1,28 +1,22 @@
 <script>
-	import {
-		Header,
-		HeaderNav,
-		HeaderNavItem,
-    Search,
-    // LogoInstagram,
-    // LogoYoutube,
-    // LogoFacebook,
-	} from "carbon-components-svelte";
-
+	import { Header, HeaderNav, HeaderNavItem, Search } from "carbon-components-svelte";
+  import FacebookLogo from "../lib/images/logo--facebook.svg";
+  import InstagramLogo from "../lib/images/logo--instagram.svg";
+  import YoutubeLogo from "../lib/images/logo--youtube.svg";
 </script>
 
 <svelte:head>
   <link
     rel="stylesheet"
-    href="https://unpkg.com/carbon-components-svelte/css/white.css"
+    href="https://unpkg.com/carbon-components-svelte/css/all.css"
   />
 </svelte:head>
 
-<Header company="Outdoor Life">
+<Header>
     <HeaderNav>
-        <HeaderNavItem><a href="https://web.facebook.com/outdoorlife?_rdc=1&_rdr">f 735k</a></HeaderNavItem>
-        <HeaderNavItem><a href="https://www.instagram.com/outdoor_life/">i 133k</a></HeaderNavItem>
-        <HeaderNavItem><a href="https://www.youtube.com/Outdoorlife">Y 54.1k</a></HeaderNavItem>
+        <HeaderNavItem><a href="https://web.facebook.com/outdoorlife?_rdc=1&_rdr"><FacebookLogo /></a>735k</HeaderNavItem>
+        <HeaderNavItem><a href="https://www.instagram.com/outdoor_life/"><InstagramLogo /></a>133k</HeaderNavItem>
+        <HeaderNavItem><a href="https://www.youtube.com/Outdoorlife"><YoutubeLogo /></a>54.1k</HeaderNavItem>
         <HeaderNavItem><Search /></HeaderNavItem>
     </HeaderNav>
 </Header>

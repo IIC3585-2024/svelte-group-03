@@ -1,7 +1,22 @@
+/** @type {import('./$types').PageServerLoad} */
 import { API_KEY } from '$env/static/private';
+// import categories from './data.json' assert { type: 'json' };
+import { get } from 'svelte/store';
 
-export async function load({ fetch }) {
-    const url = "https://newsapi.org/v2/everything?q=apple&from=2024-05-20&to=2024-05-20&sortBy=popularity&apiKey=" + API_KEY
+export async function load({ fetch, cookies }) {
+    const data = await getNews();
+    // console.log(categories);
+
+    // cookies.set('news', JSON.stringify(data), {
+    //     maxAge: 60 * 60 * 24,
+    //     path: '/',
+    // });
+
+    return data;
+}
+
+async function getNews() {
+    const url = "https://newsapi.org/v2/top-headlines?language=en&apiKey=" + API_KEY
     const response = await fetch(url);
     const data = await response.json();;
     if (!response.ok) {

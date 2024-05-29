@@ -1,11 +1,11 @@
 <script>
 	export let data;
+  import { Content } from 'carbon-components-svelte';
 </script>
   
   <main>
 	<h1>OutdoorLife</h1>  
-	<div class="card">
-	  <p>
+  <Content>
 		<ul>
 			{#each data.articles as article}
 				{#if article.title != '[Removed]'}
@@ -19,7 +19,7 @@
 				{/if}
 			{/each}
 		</ul>
-	</div>
+  </Content>
 
   </main>
   
