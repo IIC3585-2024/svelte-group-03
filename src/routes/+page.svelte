@@ -15,6 +15,7 @@
 							<img src={article.urlToImage} alt={article.title} />
 						{/if}
 						<p>{article.description}</p>
+            <p>By {article.author}</p>
 					</li>
 				{/if}
 			{/each}
