@@ -1,20 +1,20 @@
 /** @type {import('./$types').PageServerLoad} */
 import { API_KEY } from '$env/static/private';
 import categories from '../lib/categories.json';
-// import categories from './data.json' assert { type: 'json' };
-import { get } from 'svelte/store';
 
-export async function load({ fetch, cookies }) {
+export async function load() {
     const data = await getNews();
-    // const categories = await getCategories();
-    // console.log(categories);
+    let newsByCategory = [];
+    let entries = Object.entries(categories);
+    // entries.forEach(([key, value]) => {
+        
 
-    // cookies.set('news', JSON.stringify(data), {
-    //     maxAge: 60 * 60 * 24,
-    //     path: '/',
-    // });
-
-    return data;
+    return {
+        news: data.articles,
+        actualArticleId: 0,
+        articlesOnPage: [],
+    };
+    //return data;
 }
 
 async function getNews() {
@@ -28,11 +28,13 @@ async function getNews() {
     return data;
 }
 
-// async function getCategories() {
-//     const response = await fetch(self.url('./static/categories.json'));
-//     const data = await response.json();
-//     if (!response.ok) {
-//         throw new Error(data.message || 'Failed to fetch data');
-//     }
-//     return data;
-// }
+export async function getNewsByCategory(category) {
+    const url = "https://newsapi.org/v2/top-headlines?language=en&category=" + category + "&apiKey=" + API_KEY
+    const response = await fetch(url);
+    const data = await response.json();;
+    if (!response.ok) {
+        throw new Error(data.message || 'Failed to fetch data');
+    }
+
+    return data;
+}

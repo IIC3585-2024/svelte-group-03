@@ -1,5 +1,6 @@
 <script>
 	import Header from '../components/Header.svelte';
+	import Footer from '../components/Footer.svelte';
 	import './styles.css';
 </script>
 
@@ -10,9 +11,7 @@
 		<slot />
 	</main>
 
-	<footer>
-		<p>Este es el footer</p>
-	</footer>
+	<Footer />
 </div>
 
 <style>
@@ -31,20 +30,5 @@
 		max-width: 64rem;
 		margin: 0 auto;
 		box-sizing: border-box;
-	}
-
-	footer {
-		display: flex;
-		width: 100%;
-		justify-content: center;
-		background-color: rgb(231, 231, 231);
-		text-align: center;
-    	padding: 10px 0;
-	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 12px 0;
-		}
 	}
 </style>

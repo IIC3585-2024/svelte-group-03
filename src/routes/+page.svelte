@@ -1,17 +1,19 @@
 <script>
+  /** @type {import('./$types').PageData} */
 	export let data;
   import { Content } from 'carbon-components-svelte';
+  import NewsSection from '../components/NewsSection.svelte';
 </script>
   
   <main>
-	<h1>OutdoorLife</h1>  
+  <NewsSection data={data} />
   <Content>
 		<ul>
-			{#each data.articles as article}
+			{#each data.news as article}
 				{#if article.title != '[Removed]'}
 					<li>
 						<a href={article.url}>{article.title}</a>
-						{#if article.urlToImage != null}
+						{#if article.urlToImage != null && !data.articlesOnPage.includes(article.title)}
 							<img src={article.urlToImage} alt={article.title} />
 						{/if}
 						<p>{article.description}</p>
