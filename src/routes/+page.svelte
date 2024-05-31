@@ -3,6 +3,7 @@
 	export let data;
   import { Content } from 'carbon-components-svelte';
   import NewsSection from '../components/NewsSection.svelte';
+  import CategoryNewsSection from '../components/CategoryNewsSection.svelte';
 </script>
   
   <main>
@@ -22,6 +23,7 @@
 				{/if}
 			{/each}
 		</ul>
+  <!-- <CategoryNewsSection data={data} /> -->
   </Content>
 
   </main>
@@ -32,11 +34,12 @@
 	}
 
 	li {
-    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-sizing: border-box;
     border-radius: 10px;
     margin: 10px 0;
-    padding: 15px 20px;
-    color: white;
+    
     font-family: 'Arial', sans-serif;
     font-size: 18px;
     list-style-type: none;
@@ -50,7 +53,7 @@ li:hover {
 }
 
 li a {
-    color: white;
+    color: black;
     text-decoration: none;
     font-weight: bold;
 }

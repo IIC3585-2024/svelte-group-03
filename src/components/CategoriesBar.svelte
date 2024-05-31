@@ -13,7 +13,7 @@
                 <Menu>
                     <span slot="toggle">{value.name}</span>
                     {#each value.subcategories as category}
-                        <MenuItem>{category}</MenuItem>
+                        <MenuItem><a href='/category/{category}'>{category}</a></MenuItem>
                     {/each}
                 </Menu>
             </li>
