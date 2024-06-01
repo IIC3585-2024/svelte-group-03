@@ -1,9 +1,10 @@
 <script>
   /** @type {import('./$types').PageData} */
-  export let data;
   import { Content } from 'carbon-components-svelte';
   import HomeTitularlNews from '../components/HomeTitularlNews.svelte';
   import CategoryNewsSection from '../components/CategoryNewsSection.svelte';
+
+  export let data;
 </script>
   
 <main>

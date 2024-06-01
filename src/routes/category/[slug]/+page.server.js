@@ -4,6 +4,7 @@ import subcategories from '../../../lib/subcategories.json';
 
 export async function load({ params }) {
     const slug = params.slug;
+    // const lang = params.lang || 'en';
     const news = await getNewsBySearch(slug);
     const latestNews = await getNewsByLatest();
     

@@ -5,13 +5,11 @@
   import YoutubeLogo from "../lib/images/logo--youtube.svg";
   import CategoriesBar from "./CategoriesBar.svelte";
   import LanguageDropdown from "./LanguageDropdown.svelte";
+  import { createEventDispatcher } from 'svelte';
 
   let search = "";
-  let selectedLanguage = 'en';
-
-  function handleSearch() {
-    window.location.href = `/search/${search}`;
-  }
+  export let selectedLanguage = 'en';
+  const dispatch = createEventDispatcher();
 
   function handleEnter(event) {
     if (event.key === 'Enter') {
@@ -19,8 +17,14 @@
     }
   }
 
+  function handleSearch() {
+    window.location.href = `/search/${search}`;
+  }
+
   function handleLanguageChange(language) {
     selectedLanguage = language;
+    dispatch('languageChange', language);
+    location.reload();
   }
 </script>
 

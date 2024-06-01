@@ -43,41 +43,6 @@
         position: relative;
     }
 
-    .menu-item > Menu {
-        color: white;
-        cursor: pointer;
-        text-align: center;
-        padding: 10px 15px;
-        border-radius: 5px;
-        background-color: #444;
-        transition: background-color 0.3s ease;
-    }
-
-    .menu-item > Menu:hover {
-        background-color: #555;
-    }
-
-    .menu-item > Menu > .slot-toggle::after {
-        content: '\25BC'; /* Unicode for down arrow */
-        margin-left: 5px;
-    }
-
-    .menu-item > Menu ul {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background-color: #444;
-        padding: 10px;
-        border-radius: 5px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        z-index: 10;
-    }
-
-    .menu-item > Menu:hover ul {
-        display: block;
-    }
-
     .menu-item > Menu ul li {
         margin: 0;
     }

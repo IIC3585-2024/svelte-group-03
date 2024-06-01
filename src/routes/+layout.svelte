@@ -2,10 +2,17 @@
 	import Header from '../components/Header.svelte';
 	import Footer from '../components/Footer.svelte';
 	import './styles.css';
+
+	let currentLanguage = 'en';
+
+	function handleLanguageChanged(event) {
+    	currentLanguage = event.detail;
+		console.log(currentLanguage);
+  	}
 </script>
 
 <div class="app">
-	<Header />
+	<Header bind:selectedLanguage={currentLanguage} on:languageChanged={handleLanguageChanged} />
 
 	<main>
 		<slot />

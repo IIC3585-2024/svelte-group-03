@@ -1,10 +1,9 @@
 /** @type {import('./$types').PageServerLoad} */
 import { getNews, getNewsByCategory } from '../lib/getNewsBy.server.js';
 import categories from '../lib/categories.json';
-import { get } from 'svelte/store';
 
-export async function load({ query }) {
-    // const language = query.get('language') || 'en';
+export async function load({ params }) {
+    // const { lang } = params || 'en';;
     let data = await getNews();
     let newsByCategory = [];
     let entries = Object.entries(categories);

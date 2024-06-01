@@ -1,31 +1,40 @@
 <script>
     export let data;
+
     let article = data.news[data.actualArticleId]
+    let articlesOnPage = new Set();
+    let centralArticle = data.news[0];
+    let sideArticles = [];
+
     while (article.urlToImage == null) {
         data.actualArticleId += 1
         article = data.news[++data.actualArticleId]
     }
+
+    articlesOnPage.add(centralArticle.title);
+
+    for (let i = 1; i < 5; i++) {
+        let article = data.news[i];
+        sideArticles.push(article);
+        articlesOnPage.add(article.title);
+    }
 </script>
 
 <div class="main-container">
-    <div class="central-div">
-        <img src={article.urlToImage} alt={article.title} />
-        <a href={article.url}><h1>{article.title}</h1></a>
+  <div class="central-div">
+    <img src={centralArticle.urlToImage} alt={centralArticle.title} />
+    <a href={centralArticle.url}><h1>{centralArticle.title}</h1></a>
+    <p>By {centralArticle.author}</p>
+  </div>
+  <div class="side-divs-container">
+    <h1>Latest News</h1>
+    {#each sideArticles as article}
+      <div class="side-div">
+        <a href={article.url}><h2>{article.title}</h2></a>
         <p>By {article.author}</p>
-        {data.articlesOnPage.push(article.title)}
-    </div>
-    <div class="side-divs-container">
-        <h1>Latest News</h1>
-        {#each {length: 4} as _ }
-            {data.actualArticleId += 1}
-            {article = data.news[data.actualArticleId]}
-            <div class="side-div">
-                <a href={article.url}><h2>{article.title}</h2></a>
-                <p>By {article.author}</p>
-                {data.articlesOnPage.push(article.title)}
-            </div>
-        {/each}
-    </div>
+      </div>
+    {/each}
+  </div>
 </div>
 
 <style>

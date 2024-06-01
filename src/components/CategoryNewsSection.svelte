@@ -1,33 +1,38 @@
 <script>
     export let data;
     let entries = Object.entries(data.newsByCategory);
-    data.actualArticleId = 0;
-    let actualNew;
+    let mainNews = [];
+    let secondaryNews = [];
+
+    // Prepare main and secondary news for each category
+    entries.forEach(([key, value]) => {
+        let main = value.news.articles[0];
+        let secondary = value.news.articles.slice(1, 5); // Get the next 4 articles for secondary news
+        mainNews.push({ category: value.category, article: main });
+        secondaryNews.push({ category: value.category, articles: secondary });
+    });
 </script>
 
-{#each entries as [key, value]}
-    <h1>{value.category}</h1>
+{#each mainNews as main, index}
+    <h1>{main.category}</h1>
     <div class="container">
         <div class="main-news">
-            {actualNew = value.news.articles[0]}
-            <img src={actualNew.urlToImage} alt="{actualNew.title}" />
-            <a href={actualNew.url}><h2>{actualNew.title}</h2></a>
-            <p>{actualNew.description}</p>
-            {#if actualNew.author}
-                <p>By {actualNew.author}</p>
+            <img src={main.article.urlToImage} alt="{main.article.title}" />
+            <a href={main.article.url}><h2>{main.article.title}</h2></a>
+            <p>{main.article.description}</p>
+            {#if main.article.author}
+                <p>By {main.article.author}</p>
             {:else}
                 <p>By anonymous</p>
             {/if}
         </div>
         <div class="secondary-news">
-            {#each {length: 4} as _, i}
+            {#each secondaryNews[index].articles as article}
                 <div class="news-item">
-                    {data.actualArticleId += 1}
-                    {actualNew = value.news.articles[data.actualArticleId]}
-                    <img src={actualNew.urlToImage} alt="{actualNew.title}" />
-                    <a href={actualNew.url}><h2>{actualNew.title}</h2></a>
-                    {#if actualNew.author}
-                        <p>By {actualNew.author}</p>
+                    <img src={article.urlToImage} alt="{article.title}" />
+                    <a href={article.url}><h2>{article.title}</h2></a>
+                    {#if article.author}
+                        <p>By {article.author}</p>
                     {:else}
                         <p>By anonymous</p>
                     {/if}
