@@ -10,7 +10,7 @@
             <h2>{category.name}</h2>
             <ul>
                 {#each category.subcategories as subcategory}
-                    <li>{subcategory}</li>
+                    <li><a href='/category/{subcategory}'>{subcategory}</a></li>
                 {/each}
             </ul>
         </div>
@@ -69,5 +69,14 @@
 
     h1 {
         color: white;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: none;
     }
 </style>

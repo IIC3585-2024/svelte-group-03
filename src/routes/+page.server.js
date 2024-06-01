@@ -1,6 +1,5 @@
 /** @type {import('./$types').PageServerLoad} */
-import { API_KEY } from '$env/static/private';
-import { get } from 'svelte/store';
+import { getNews, getNewsByCategory } from '../lib/getNewsBy.server.js';
 import categories from '../lib/categories.json';
 
 export async function load() {
@@ -24,26 +23,4 @@ export async function load() {
         articlesOnPage: [],
         newsByCategory: newsByCategory
     };
-}
-
-async function getNews() {
-    const url = "https://newsapi.org/v2/top-headlines?language=en&apiKey=" + API_KEY
-    const response = await fetch(url);
-    const data = await response.json();;
-    if (!response.ok) {
-        throw new Error(data.message || 'Failed to fetch data');
-    }
-
-    return data;
-}
-
-export async function getNewsByCategory(category) {
-    const url = "https://newsapi.org/v2/top-headlines?language=en&category=" + category + "&apiKey=" + API_KEY
-    const response = await fetch(url);
-    const data = await response.json();;
-    if (!response.ok) {
-        throw new Error(data.message || 'Failed to fetch data');
-    }
-
-    return data;
 }

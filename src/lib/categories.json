@@ -1,37 +1,37 @@
 {
     "business": {
         "name": "business",
-        "subcategories":  ["business", "business news"]
+        "subcategories":  ["business news", "investing", "personal finance", "stocks", "small business"]
     },
 
     "entertainment": {
         "name": "entertainment",
-        "subcategories": ["entertainment", "celebrity", "movies", "music", "tv"]
+        "subcategories": ["celebrity", "movies", "music", "tv"]
 
     },
 
     "general": {
         "name": "general",
-        "subcategories": ["general", "news"]
+        "subcategories": ["politics", "world news", "us news", "local news"]
     },
 
     "health": {
         "name": "health",
-        "subcategories": ["health", "medical", "science"]
+        "subcategories": ["medical", "fitness", "nutrition", "mental health", "diseases"]
     },
 
     "science": {
         "name": "science",
-        "subcategories": ["science", "environment", "space"]
+        "subcategories": ["environment", "space"]
     },
    
     "sports": {
         "name": "sports",
-        "subcategories": ["sports", "football", "baseball", "basketball", "hockey", "soccer"]
+        "subcategories": ["football", "baseball", "basketball", "hockey", "soccer"]
     },
 
     "technology": {
         "name": "technology",
-        "subcategories": ["technology", "gaming", "computers", "internet", "mobile"]
+        "subcategories": ["gaming", "computers", "internet", "mobile"]
     }
 }

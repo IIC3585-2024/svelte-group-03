@@ -1,3 +1,6 @@
-<!-- <script>
+<script>
+    import SearchNews from "../../../components/SearchNews.svelte";
     export let data;
-</script> -->
+</script>
+
+<SearchNews {data} />

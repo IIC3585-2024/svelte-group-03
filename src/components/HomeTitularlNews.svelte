@@ -16,7 +16,7 @@
     </div>
     <div class="side-divs-container">
         <h1>Latest News</h1>
-        {#each {length: 3} as _ }
+        {#each {length: 4} as _ }
             {data.actualArticleId += 1}
             {article = data.news[data.actualArticleId]}
             <div class="side-div">
@@ -47,6 +47,7 @@ img {
     flex: 3; 
     background-color: #f0f0f0;
     padding: 20px;
+    padding-bottom: 100px;
     box-sizing: border-box;
     min-height: 300px;
     border: 2px solid #ccc;
@@ -74,5 +75,15 @@ img {
     min-height: 50px;
     flex-grow: 1;
     overflow: hidden;
+}
+a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #e35807;
 }
 </style>

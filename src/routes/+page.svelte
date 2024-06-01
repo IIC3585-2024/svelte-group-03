@@ -2,12 +2,12 @@
   /** @type {import('./$types').PageData} */
 	export let data;
   import { Content } from 'carbon-components-svelte';
-  import NewsSection from '../components/NewsSection.svelte';
+  import HomeTitularlNews from '../components/HomeTitularlNews.svelte';
   import CategoryNewsSection from '../components/CategoryNewsSection.svelte';
 </script>
   
   <main>
-  <NewsSection data={data} />
+  <HomeTitularlNews data={data} />
   <Content>
 		<ul>
 			{#each data.news as article}
@@ -18,7 +18,11 @@
 							<img src={article.urlToImage} alt={article.title} />
 						{/if}
 						<p>{article.description}</p>
-            <p>By {article.author}</p>
+            {#if article.author != null}
+              <p>By {article.author}</p>
+            {:else}
+              <p>By anonymous</p>
+            {/if}
 					</li>
 				{/if}
 			{/each}
@@ -58,8 +62,9 @@ li a {
     font-weight: bold;
 }
 
-li a:hover {
-    text-decoration: underline;
+a:hover {
+    text-decoration: none;
+    color: #e35807;
 }
 
 li img {

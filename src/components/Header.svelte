@@ -27,7 +27,7 @@
         <HeaderNavItem><a href="https://www.youtube.com/Outdoorlife"><YoutubeLogo /></a>54.1k</HeaderNavItem>
         <HeaderNavItem><Button kind="secondary" on:click={() => handleSearch(search)}>Search</Button></HeaderNavItem>
         <HeaderNavItem><Search bind:search placeholder=''/></HeaderNavItem>
-        <h1>OutdoorLife</h1> 
+        <a href="../"><h1>OutdoorLife</h1></a>
     </HeaderNav>
 <!-- </Header> -->
 <CategoriesBar />
@@ -39,4 +39,7 @@
     color: #e35807;
     border-color: #d45207;
   }
+  a:hover {
+  text-decoration: none;
+}
 </style>
