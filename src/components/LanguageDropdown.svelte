@@ -7,9 +7,10 @@
   let dropdownOptions = [];
 
   const setDropdownOptions = (lang) => {
-    return Object.keys(languages).map(key => ({
-      code: languages[key].code,
-      label: languages[key].translations[lang]
+    let options = languages[lang].translations;
+    return Object.keys(options).map(key => ({
+      code: key,
+      label: options[key]
     })).sort((a, b) => a.label.localeCompare(b.label));
   };
 
@@ -22,7 +23,7 @@
 </script>
 
 <div>
-  <label for="language-select">Select Language:</label>
+  <label for="language-select"></label>
   <select id="language-select" bind:value={selectedLanguage} on:change={handleChange}>
     {#each dropdownOptions as option}
       <option value={option.code}>{option.label}</option>

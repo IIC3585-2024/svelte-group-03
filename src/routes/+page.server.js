@@ -1,16 +1,10 @@
 /** @type {import('./$types').PageServerLoad} */
 import { getNews, getNewsByCategory } from '../lib/getNewsBy.server.js';
 import categories from '../lib/categories.json';
+import { get } from 'svelte/store';
 
-export async function load({cookies}) {
-    // let data;
-    // const cachedData = await cookies.get('newsData');
-    // if (cachedData) {
-    //     data = cachedData;
-    // } else {
-    //     data = await getNews();
-    //     await cookies.set('newsData', data);
-    // }
+export async function load({ query }) {
+    // const language = query.get('language') || 'en';
     let data = await getNews();
     let newsByCategory = [];
     let entries = Object.entries(categories);

@@ -36,10 +36,6 @@
 </main>
   
 <style>
-  h1 {
-    padding: 1.5em;
-  }
-
   .news-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -98,7 +94,5 @@
     height: auto;
     display: block;
   }
-
   
-
 </style>

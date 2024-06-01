@@ -3,30 +3,34 @@
     let entries = Object.entries(data.newsByCategory);
     data.actualArticleId = 0;
     let actualNew;
-
-    function nextNew(value) {
-        data.actualArticleId += 1;
-        actualNew = value.news.articles[data.actualArticleId];
-        while (actualNew.urlToImage == null) {
-            data.actualArticleId += 1;
-            actualNew = value.news.articles[data.actualArticleId];
-        }
-        console.log(actualNew.title);
-    }
 </script>
 
 {#each entries as [key, value]}
     <h1>{value.category}</h1>
     <div class="container">
-        <div class="main-image">
+        <div class="main-news">
             {actualNew = value.news.articles[0]}
             <img src={actualNew.urlToImage} alt="{actualNew.title}" />
+            <a href={actualNew.url}><h2>{actualNew.title}</h2></a>
+            <p>{actualNew.description}</p>
+            {#if actualNew.author}
+                <p>By {actualNew.author}</p>
+            {:else}
+                <p>By anonymous</p>
+            {/if}
         </div>
-        <div class="news-grid">
-            {#each {length: 4} as _ }
-                {nextNew(value)}
+        <div class="secondary-news">
+            {#each {length: 4} as _, i}
                 <div class="news-item">
+                    {data.actualArticleId += 1}
+                    {actualNew = value.news.articles[data.actualArticleId]}
                     <img src={actualNew.urlToImage} alt="{actualNew.title}" />
+                    <a href={actualNew.url}><h2>{actualNew.title}</h2></a>
+                    {#if actualNew.author}
+                        <p>By {actualNew.author}</p>
+                    {:else}
+                        <p>By anonymous</p>
+                    {/if}
                 </div>
             {/each}
         </div>
@@ -36,29 +40,44 @@
 <style>
     .container {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        justify-content: space-between;
+        align-items: flex-start;
     }
 
-    .main-image {
-        margin-bottom: 20px;
+    .main-news {
+        flex: 1;
+        margin-right: 20px;
     }
 
-    .news-grid {
+    .main-news img {
+        width: 100%;
+    }
+
+    .secondary-news {
+        flex: 1;
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         gap: 20px;
-    }
-
-    .news-item {
-        border-radius: 10px;
-        overflow: hidden;
     }
 
     .news-item img {
         width: 100%;
-        height: 100%;
-        object-fit: cover;
+        height: auto;
     }
+
+    a {
+        color: black;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #e35807;
+    }
+
+    h1 {
+        padding: 0.5em;
+        padding-top: 15%;
+        text-align: left;
+    }
+
 </style>
