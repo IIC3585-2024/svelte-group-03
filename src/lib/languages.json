@@ -1,0 +1,283 @@
+{
+    "ar": {
+      "code": "ar",
+      "native": "العربية",
+      "translations": {
+        "ar": "العربية",
+        "de": "الألمانية",
+        "en": "الإنجليزية",
+        "es": "الإسبانية",
+        "fr": "الفرنسية",
+        "he": "العبرية",
+        "it": "الإيطالية",
+        "nl": "الهولندية",
+        "no": "النرويجية",
+        "pt": "البرتغالية",
+        "ru": "الروسية",
+        "sv": "السويدية",
+        "ud": "الأردية",
+        "zh": "الصينية"
+      }
+    },
+    "de": {
+      "code": "de",
+      "native": "Deutsch",
+      "translations": {
+        "ar": "Arabisch",
+        "de": "Deutsch",
+        "en": "Englisch",
+        "es": "Spanisch",
+        "fr": "Französisch",
+        "he": "Hebräisch",
+        "it": "Italienisch",
+        "nl": "Niederländisch",
+        "no": "Norwegisch",
+        "pt": "Portugiesisch",
+        "ru": "Russisch",
+        "sv": "Schwedisch",
+        "ud": "Urdu",
+        "zh": "Chinesisch"
+      }
+    },
+    "en": {
+      "code": "en",
+      "native": "English",
+      "translations": {
+        "ar": "Arabic",
+        "de": "German",
+        "en": "English",
+        "es": "Spanish",
+        "fr": "French",
+        "he": "Hebrew",
+        "it": "Italian",
+        "nl": "Dutch",
+        "no": "Norwegian",
+        "pt": "Portuguese",
+        "ru": "Russian",
+        "sv": "Swedish",
+        "ud": "Urdu",
+        "zh": "Chinese"
+      }
+    },
+    "es": {
+      "code": "es",
+      "native": "Español",
+      "translations": {
+        "ar": "Árabe",
+        "de": "Alemán",
+        "en": "Inglés",
+        "es": "Español",
+        "fr": "Francés",
+        "he": "Hebreo",
+        "it": "Italiano",
+        "nl": "Neerlandés",
+        "no": "Noruego",
+        "pt": "Portugués",
+        "ru": "Ruso",
+        "sv": "Sueco",
+        "ud": "Urdu",
+        "zh": "Chino"
+      }
+    },
+    "fr": {
+      "code": "fr",
+      "native": "Français",
+      "translations": {
+        "ar": "Arabe",
+        "de": "Allemand",
+        "en": "Anglais",
+        "es": "Espagnol",
+        "fr": "Français",
+        "he": "Hébreu",
+        "it": "Italien",
+        "nl": "Néerlandais",
+        "no": "Norvégien",
+        "pt": "Portugais",
+        "ru": "Russe",
+        "sv": "Suédois",
+        "ud": "Ourdou",
+        "zh": "Chinois"
+      }
+    },
+    "he": {
+      "code": "he",
+      "native": "עברית",
+      "translations": {
+        "ar": "ערבית",
+        "de": "גרמנית",
+        "en": "אנגלית",
+        "es": "ספרדית",
+        "fr": "צרפתית",
+        "he": "עברית",
+        "it": "איטלקית",
+        "nl": "הולנדית",
+        "no": "נורווגית",
+        "pt": "פורטוגזית",
+        "ru": "רוסית",
+        "sv": "שוודית",
+        "ud": "אורדו",
+        "zh": "סינית"
+      }
+    },
+    "it": {
+      "code": "it",
+      "native": "Italiano",
+      "translations": {
+        "ar": "Arabo",
+        "de": "Tedesco",
+        "en": "Inglese",
+        "es": "Spagnolo",
+        "fr": "Francese",
+        "he": "Ebraico",
+        "it": "Italiano",
+        "nl": "Olandese",
+        "no": "Norvegese",
+        "pt": "Portoghese",
+        "ru": "Russo",
+        "sv": "Svedese",
+        "ud": "Urdu",
+        "zh": "Cinese"
+      }
+    },
+    "nl": {
+      "code": "nl",
+      "native": "Nederlands",
+      "translations": {
+        "ar": "Arabisch",
+        "de": "Duits",
+        "en": "Engels",
+        "es": "Spaans",
+        "fr": "Frans",
+        "he": "Hebreeuws",
+        "it": "Italiaans",
+        "nl": "Nederlands",
+        "no": "Noors",
+        "pt": "Portugees",
+        "ru": "Russisch",
+        "sv": "Zweeds",
+        "ud": "Urdu",
+        "zh": "Chinees"
+      }
+    },
+    "no": {
+      "code": "no",
+      "native": "Norsk",
+      "translations": {
+        "ar": "Arabisk",
+        "de": "Tysk",
+        "en": "Engelsk",
+        "es": "Spansk",
+        "fr": "Fransk",
+        "he": "Hebraisk",
+        "it": "Italiensk",
+        "nl": "Nederlandsk",
+        "no": "Norsk",
+        "pt": "Portugisisk",
+        "ru": "Russisk",
+        "sv": "Svensk",
+        "ud": "Urdu",
+        "zh": "Kinesisk"
+      }
+    },
+    "pt": {
+      "code": "pt",
+      "native": "Português",
+      "translations": {
+        "ar": "Árabe",
+        "de": "Alemão",
+        "en": "Inglês",
+        "es": "Espanhol",
+        "fr": "Francês",
+        "he": "Hebraico",
+        "it": "Italiano",
+        "nl": "Holandês",
+        "no": "Norueguês",
+        "pt": "Português",
+        "ru": "Russo",
+        "sv": "Sueco",
+        "ud": "Urdu",
+        "zh": "Chinês"
+      }
+    },
+    "ru": {
+      "code": "ru",
+      "native": "Русский",
+      "translations": {
+        "ar": "Арабский",
+        "de": "Немецкий",
+        "en": "Английский",
+        "es": "Испанский",
+        "fr": "Французский",
+        "he": "Иврит",
+        "it": "Итальянский",
+        "nl": "Голландский",
+        "no": "Норвежский",
+        "pt": "Португальский",
+        "ru": "Русский",
+        "sv": "Шведский",
+        "ud": "Урду",
+        "zh": "Китайский"
+      }
+    },
+    "sv": {
+      "code": "sv",
+      "native": "Svenska",
+      "translations": {
+        "ar": "Arabiska",
+        "de": "Tyska",
+        "en": "Engelska",
+        "es": "Spanska",
+        "fr": "Franska",
+        "he": "Hebreiska",
+        "it": "Italienska",
+        "nl": "Holländska",
+        "no": "Norska",
+        "pt": "Portugisiska",
+        "ru": "Ryska",
+        "sv": "Svenska",
+        "ud": "Urdu",
+        "zh": "Kinesiska"
+      }
+    },
+    "ud": {
+      "code": "ud",
+      "native": "اردو",
+      "translations": {
+        "ar": "عربی",
+        "de": "جرمن",
+        "en": "انگریزی",
+        "es": "ہسپانوی",
+        "fr": "فرانسیسی",
+        "he": "عبرانی",
+        "it": "اطالوی",
+        "nl": "ڈچ",
+        "no": "نارویجین",
+        "pt": "پرتگالی",
+        "ru": "روسی",
+        "sv": "سویڈش",
+        "ud": "اردو",
+        "zh": "چینی"
+      }
+    },
+    "zh": {
+      "code": "zh",
+      "native": "中文",
+      "translations": {
+        "ar": "阿拉伯语",
+        "de": "德语",
+        "en": "英语",
+        "es": "西班牙语",
+        "fr": "法语",
+        "he": "希伯来语",
+        "it": "意大利语",
+        "nl": "荷兰语",
+        "no": "挪威语",
+        "pt": "葡萄牙语",
+        "ru": "俄语",
+        "sv": "瑞典语",
+        "ud": "乌尔都语",
+        "zh": "中文"
+      }
+    }
+  }
+  

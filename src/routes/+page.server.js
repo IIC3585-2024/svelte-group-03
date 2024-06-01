@@ -2,8 +2,16 @@
 import { getNews, getNewsByCategory } from '../lib/getNewsBy.server.js';
 import categories from '../lib/categories.json';
 
-export async function load() {
-    const data = await getNews();
+export async function load({cookies}) {
+    // let data;
+    // const cachedData = await cookies.get('newsData');
+    // if (cachedData) {
+    //     data = cachedData;
+    // } else {
+    //     data = await getNews();
+    //     await cookies.set('newsData', data);
+    // }
+    let data = await getNews();
     let newsByCategory = [];
     let entries = Object.entries(categories);
     let randomCategories = [];

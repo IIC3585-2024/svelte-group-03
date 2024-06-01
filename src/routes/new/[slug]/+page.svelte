@@ -1,7 +1,6 @@
-<!-- <script>
-	export let data;
+<script>
+  import SearchNews from "../../../components/SearchNews.svelte";
+  export let data;
 </script>
-  
-  <main>
-    <h1>{data.new.title}</h1>
-  </main> -->
+
+<SearchNews {data} />

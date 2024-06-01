@@ -41,6 +41,7 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin: 2%;
   }
 
   .news-item {
