@@ -1,11 +1,13 @@
 /** @type {import('./$types').PageServerLoad} */
 import { getNewsBySearch, getNewsByLatest } from '../../../lib/getNewsBy.server.js'
+import { lang } from '../../../lib/stores.js';
+import { get } from 'svelte/store';
 
 export async function load({ params }) {
     const slug = params.slug;
-    // const lang = params.lang || 'en';
-    const news = await getNewsBySearch(slug);
-    const latestNews = await getNewsByLatest();
+    const langValue = get(lang);
+    const news = await getNewsBySearch(lang, slug);
+    const latestNews = await getNewsByLatest(lang);
     
     return {
         news: news.articles,

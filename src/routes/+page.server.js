@@ -1,10 +1,12 @@
 /** @type {import('./$types').PageServerLoad} */
 import { getNews, getNewsByCategory } from '../lib/getNewsBy.server.js';
 import categories from '../lib/categories.json';
+import { lang } from '../lib/stores.js';
+import { get } from 'svelte/store';
 
-export async function load({ params }) {
-    // const { lang } = params || 'en';;
-    let data = await getNews();
+export async function load() {
+    const langValue = get(lang);
+    let data = await getNews(langValue);
     let newsByCategory = [];
     let entries = Object.entries(categories);
     let randomCategories = [];
@@ -14,7 +16,7 @@ export async function load({ params }) {
             randomIndex = Math.floor(Math.random() * entries.length);
         }
         let category = entries[randomIndex][0];
-        let news = await getNewsByCategory(category);
+        let news = await getNewsByCategory(langValue, category);
         newsByCategory.push({ category: category, news: news });
     }    
 
