@@ -1,10 +1,10 @@
 /** @type {import('./$types').PageServerLoad} */
-import { getNews, getNewsByCategory } from '../lib/getNewsBy.server.js';
-import categories from '../lib/categories.json';
+import { getNews, getNewsByCategory } from '../../lib/getNewsBy.server.js';
+import categories from '../../lib/categories.json';
 
 export async function load({ params }) {
-    // const { lang } = params || 'en';;
-    let data = await getNews();
+    const lang = params["lang"];
+    let data = await getNews(lang);
     let newsByCategory = [];
     let entries = Object.entries(categories);
     let randomCategories = [];
@@ -14,7 +14,7 @@ export async function load({ params }) {
             randomIndex = Math.floor(Math.random() * entries.length);
         }
         let category = entries[randomIndex][0];
-        let news = await getNewsByCategory(category);
+        let news = await getNewsByCategory(lang, category);
         newsByCategory.push({ category: category, news: news });
     }    
 

@@ -1,8 +1,7 @@
 <script>
-  export let selectedLanguage = 'en';
-  export let onLanguageChange;
-
   import languages from '../lib/languages.json';
+  import currentLang from '../lib/stores.js';
+  export let selectedLanguage = currentLang.get() || 'en';
 
   let dropdownOptions = [];
 
@@ -17,8 +16,8 @@
   $: dropdownOptions = setDropdownOptions(selectedLanguage);
 
   function handleChange(event) {
-    selectedLanguage = event.target.value;
-    onLanguageChange(selectedLanguage); 
+    selectedLanguage = event.target.value; 
+    currentLang.set(selectedLanguage);
   }
 </script>
 

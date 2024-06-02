@@ -1,12 +1,12 @@
-/** @type {import('./$types').PageServerLoad} */
-import { getNewsBySearch, getNewsByLatest } from '../../../lib/getNewsBy.server.js'
-import subcategories from '../../../lib/subcategories.json';
+/** @type {import('./$types.js').PageServerLoad} */
+import { getNewsBySearch, getNewsByLatest } from '../../../../lib/getNewsBy.server.js'
+import subcategories from '../../../../lib/subcategories.json';
 
 export async function load({ params }) {
     const slug = params.slug;
-    // const lang = params.lang || 'en';
-    const news = await getNewsBySearch(slug);
-    const latestNews = await getNewsByLatest();
+    const lang = params["lang"];
+    const news = await getNewsBySearch(lang, slug);
+    const latestNews = await getNewsByLatest(lang);
     
     return {
         news: news.articles,

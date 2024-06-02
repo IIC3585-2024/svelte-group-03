@@ -1,7 +1,7 @@
 import { API_KEY } from '$env/static/private';
 
-export async function getNewsBySearch(search) {
-    const url = "https://newsapi.org/v2/top-headlines?language=en&q=" + search + "&apiKey=" + API_KEY
+export async function getNewsBySearch(lang, search) {
+    const url = "https://newsapi.org/v2/top-headlines?language=" + lang + "&q=" + search + "&apiKey=" + API_KEY
     const response = await fetch(url);
     const data = await response.json();;
     if (!response.ok) {
@@ -11,8 +11,8 @@ export async function getNewsBySearch(search) {
     return data;
 }
 
-export async function getNewsByLatest() {
-    const url = "https://newsapi.org/v2/top-headlines?language=en&sortBy=publishedAt" + "&apiKey=" + API_KEY
+export async function getNewsByLatest(lang) {
+    const url = "https://newsapi.org/v2/top-headlines?language" + lang + "n&sortBy=publishedAt" + "&apiKey=" + API_KEY
     const response = await fetch(url);
     const data = await response.json();;
     if (!response.ok) {
@@ -22,8 +22,8 @@ export async function getNewsByLatest() {
     return data;
 }
 
-export async function getNews() {
-    const url = "https://newsapi.org/v2/top-headlines?language=en&apiKey=" + API_KEY
+export async function getNews(lang) {
+    const url = "https://newsapi.org/v2/top-headlines?language=" + lang + "&apiKey=" + API_KEY
     const response = await fetch(url);
     const data = await response.json();;
     if (!response.ok) {
@@ -33,8 +33,8 @@ export async function getNews() {
     return data;
 }
 
-export async function getNewsByCategory(category) {
-    const url = "https://newsapi.org/v2/top-headlines?language=en&category=" + category + "&apiKey=" + API_KEY
+export async function getNewsByCategory(lang, category) {
+    const url = "https://newsapi.org/v2/top-headlines?language=" + lang + "&category=" + category + "&apiKey=" + API_KEY
     const response = await fetch(url);
     const data = await response.json();;
     if (!response.ok) {

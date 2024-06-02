@@ -6,6 +6,8 @@
   import CategoriesBar from "./CategoriesBar.svelte";
   import LanguageDropdown from "./LanguageDropdown.svelte";
   import { createEventDispatcher } from 'svelte';
+  import currentLang from '../lib/stores.js';
+    import { goto } from '$app/navigation'
 
   let search = "";
   export let selectedLanguage = 'en';
@@ -18,7 +20,7 @@
   }
 
   function handleSearch() {
-    window.location.href = `/search/${search}`;
+    goto(`/${currentLang}/search/${search}`);
   }
 
   function handleLanguageChange(language) {
