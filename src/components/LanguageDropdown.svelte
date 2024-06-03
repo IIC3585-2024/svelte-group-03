@@ -4,7 +4,6 @@
   import { get } from 'svelte/store';
 
   export let selectedLanguage = get(lang);
-  export let onLanguageChange;
 
   let dropdownOptions = [];
 
@@ -20,7 +19,6 @@
 
   function handleChange(event) {
     selectedLanguage = event.target.value;
-    onLanguageChange(selectedLanguage); 
     lang.set(selectedLanguage);
     console.log(get(lang));
   }

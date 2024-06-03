@@ -48,7 +48,7 @@ img {
     margin: 0;
     overflow-x: hidden;
     display: flex;
-    width:85vw; 
+    width:100%; 
     box-sizing: border-box;
 }
 
