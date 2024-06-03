@@ -7,8 +7,8 @@ import { get } from 'svelte/store';
 export async function load({ params }) {
     const slug = params.slug;
     const langValue = get(lang);
-    const news = await getNewsBySearch(lang, slug);
-    const latestNews = await getNewsByLatest(lang);
+    const news = await getNewsBySearch(langValue, slug);
+    const latestNews = await getNewsByLatest(langValue);
     
     return {
         news: news.articles,
