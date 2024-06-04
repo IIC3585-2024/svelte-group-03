@@ -4,7 +4,6 @@
   import InstagramLogo from "../lib/images/logo--instagram.svg";
   import YoutubeLogo from "../lib/images/logo--youtube.svg";
   import CategoriesBar from "./CategoriesBar.svelte";
-  import LanguageDropdown from "./LanguageDropdown.svelte";
   import { createEventDispatcher } from 'svelte';
 
   let search = "";
@@ -36,9 +35,6 @@
 </svelte:head>
 
 <HeaderNav>
-  <HeaderNavItem>
-    <LanguageDropdown bind:selectedLanguage on:languageChange={handleLanguageChange} />
-  </HeaderNavItem>
   <HeaderNavItem>
     <a class="logo" href="https://web.facebook.com/outdoorlife?_rdc=1&_rdr"><FacebookLogo /></a>
     <span>735k</span>
